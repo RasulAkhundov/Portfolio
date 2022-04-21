@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <script src="/js/axios.min.js"></script>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/home.js"></script>
+    <title>Rasul Akhundov / Home</title>
+</head>
+<body>
+    <div class="cursor-pointer" id="cursor-pointer">
+        <div class="circle"></div>
+    </div>
+    <!-- MENU SECTION -->
+    <div class="menu-section">
+        <div class="menu-section-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-6 ml-4 ml-sm-0 route-section">
+                        <ul>
+                            <li>
+                                <a href="/">
+                                    <p>01</p>
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/#about-me">
+                                    <p>02</p>
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/#services">
+                                    <p>03</p>
+                                    Services
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/#portfolio">
+                                    <p>04</p>
+                                    Portfolio
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/#get-in-touch">
+                                    <p>05</p>
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 contact-section">
+                        <div class="contact-block">
+                            <h3>EMAIL</h3>
+                            <p>resul.axundov2002@mail.ru</p>
+                        </div>
+                        <div class="contact-block">
+                            <h3>CALL ME</h3>
+                            <p>994 55 507 44 98</p>
+                        </div>
+                        <div class="contact-block">
+                            <h3>ADDRESS</h3>
+                            <p>Baku, Azerbaijan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-big-image">
+        <div class="btn">
+            <i class="fa-solid fa-arrow-left" id="previous-image"></i>
+            <i class="fa-solid fa-arrow-right" id="next-image"></i>
+        </div>
+        <div class="img-wrapper">
+            <i class="fa-solid fa-xmark" id="close-portfolio-img"></i>
+            <img src="/assets/portfolio-1.png" id="portfolio-image" class="img-fluid" alt="">
+            <span id="portfolio-number-counter">1 of 9</span>
+        </div>
+    </div>
+    <div class="loading-cover-wrapper" id="loading-cover-wrapper"></div>
+    <div class="loading-wrapper" id="loading-wrapper">
+        <p>RASUL</p>
+        <div class="screen">
+            <button type="button" id="page-open-btn">RASUL</button>
+        </div>
+    </div>
+    <header>
+        <div class="header-wrapper" id="header-wrapper">
+            <div class="container">
+                <div class="header-bar">
+                    <a href="/#"><img src="/assets/logo.png" width="30px" alt=""></a>
+                    <div class="menu-toggle">
+                        <label for="check">
+                            <input type="checkbox" id="check"/>
+                            <div class="line line-1"></div>
+                            <div class="line line-2"></div>
+                            <div class="line line-3"></div>
+                            <div class="menu-toggle-button" id="menu-toggle"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-section" id="home-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8">
+                        <div class="home-section-cover">
+                            <div class="home-section-wrapper">
+                                <div class="home-image">
+                                    
+                                </div>
+                                <h2>RASUL AXUNDOV</h2>
+                                <SPAN>I'M WEB DEVELOPER</SPAN>
+                                <div class="social-icons">
+                                    <a href="/#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="/#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="/#"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="/#"><i class="fa-brands fa-github"></i></a>
+                                </div>
+                                <div class="btns">
+                                    <a href="/#get-in-touch"><button type="button">CONTACT ME</button></a>
+                                    <a href="https://docs.google.com/uc?export=download&id=1imcMUCfV5rUal4wBs9ixFEuU3Q97LXmu" style="margin: 0;"><button type="button" id="download-cv"><i class="fa-solid fa-download"></i> DOWNLOAD CV</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-icon">
+                <div class="dot"></div>
+                <a href="/#about-me"><div class="animatedButton">
+                    <div class="mouse-dot"></div>
+                </div></a>
+            </div>
+            <div class="fixed-social-icons">
+                <a href="/#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="/#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="/#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <span>Follow Me</span>
+            </div>
+        </div>
+    </header>
+
+    <!-------------------------------------------->
+    <!-- ABOUT ME SECTION -->
+    <!-------------------------------------------->
+    <div class="about-me-section" id="about-me">
+        <div class="header-text sections-header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title" style="margin-bottom: 70px;">
+                            <h2>About Me</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6 mb-4 mb-md-0 about-image-section">
+                        <div class="about-img">
+                            <img src="/assets/My-image3.jpg" width="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 about-text-section">
+                        <h2 class="about-title">Hello, Im Rasul Akhundov</h2>
+                        <p class="about-paragraph">Hello, I am Rasul. I am a front end developer and I can use node js and mongo db technologies. I like to do my work on time and accurately. I enjoy learning new technologies and libraries, I love to achieve the goals I set for myself. I hope we will do better while working with you.</p>
+                        <a href="https://docs.google.com/uc?export=download&id=1imcMUCfV5rUal4wBs9ixFEuU3Q97LXmu"><button type="button" id="download-cv">DOWNLOAD CV</button></a>
+                    </div>
+                    <div class="col-12 about-info-section">
+                        <div class="container" style="border: 1px solid rgba(255,255,255,0.1); padding: 15px;">
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                    <ul>
+                                        <li class="birth-box">
+                                            <span>Birthday:</span>
+                                            <span>19/10/2002</span>
+                                        </li>
+                                        <li class="city-box">
+                                            <span>City:</span>
+                                            <span>Baku, Azerbaijan</span>
+                                        </li>
+                                        <li class="degree-box">
+                                            <span>Degree:</span>
+                                            <span>Computer Engineering</span>
+                                        </li>
+                                        <li class="mail-box">
+                                            <span>Mail: </span>
+                                            <a href="https://mail.ru/" target="_blank"><span>resul.axundov2002@mail.ru</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <ul>
+                                        <li class="age-box">
+                                            <span>Age: </span>
+                                            <span>20</span>
+                                        </li>
+                                        <li class="study-box">
+                                            <span>Study: </span>
+                                            <span>Baku Computer Vocational College</span>
+                                        </li>
+                                        <li class="website-box">
+                                            <span>Website: </span>
+                                            <a href="https://rasulakhundov.com" target="_blank"><span>www.rasulakhundov.com</span></a>
+                                        </li>
+                                        <li class="phone-box">
+                                            <span>Phone: </span>
+                                            <span>+994555074498</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------------->
+    <!--------MY SERVICES--------------->
+    <!---------------------------------->
+    <div class="services-section">
+        <div class="header-text sections-header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title" style="margin-bottom: 70px;">
+                            <h2>Services</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0 d-flex flex-column align-items-center services-container-cover">
+                        <div class="services-container services-container-1 p-4">
+                            <div class="img">
+                                <img src="/assets/front-end.png" alt="frontend">
+                            </div>
+                            <h2>Front End</h2>
+                            <p>A responsive design makes your website accessible to all users, regardless of their device.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0 d-flex flex-column align-items-center">
+                        <div class="services-container services-container-2 p-4 mt-0 mt-lg-5">
+                            <div class="img">
+                                <img src="/assets/backend.png" alt="backend">
+                            </div>
+                            <h2>Node Js</h2>
+                            <p>Clean, modern designs - optimized for performance, search engines, and converting users to customers.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center">
+                        <div class="services-container services-container-3 p-4">
+                            <div class="img">
+                                <img src="/assets/server.png" alt="server" width="75px !important">
+                            </div>
+                            <h2>Mongo Db</h2>
+                            <p>Get insights into who is browsing your site so that you can make smarter business decisions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------------->
+    <!--------SKILLS SECTION--------------->
+    <!---------------------------------->
+    <div class="skills-section">
+        <div class="header-text sections-header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title" style="margin-bottom: 70px;">
+                            <h2>Technical Skills</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="technical-skills-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-4 mb-md-0 skill-list-col">
+                        <div class="skills-list">
+                            <div class="skills-title">
+                                <div class="line"></div>
+                            </div>
+                            <div class="html list-element">
+                                <div class="single-skill-header">
+                                    <span class="skill-name">HTML</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="progress-bar" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="css list-element">
+                                <div class="single-skill-header">
+                                    <span class="skill-name">CSS</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="progress-bar" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="javascript list-element">
+                                <div class="single-skill-header">
+                                    <span class="skill-name">JAVASCRIPT</span>
+                                    <span class="skill-percent">70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="progress-bar" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                            <div class="scss list-element">
+                                <div class="single-skill-header">
+                                    <span class="skill-name">SCSS</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="progress-bar" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                            <div class="npm list-element">
+                                <div class="single-skill-header">
+                                    <span class="skill-name">NPM</span>
+                                    <span class="skill-percent">60%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="progress-bar" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 skill-list-col">
+                        <div class="skills-list">
+                            <div class="skills-title">
+                                <div class="line"></div>
+                            </div>
+                            <div class="react list-element">
+                                <div class="single-skill-header">
+                                    <span class="skill-name">REACT JS</span>
+                                    <span class="skill-percent">60%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="progress-bar" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                            <div class="node list-element">
+                                <div class="single-skill-header">
+                                    <span class="skill-name">NODE JS</span>
+                                    <span class="skill-percent">60%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="progress-bar" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                            <div class="mongo list-element">
+                                <div class="single-skill-header">
+                                    <span class="skill-name">MONGO DB</span>
+                                    <span class="skill-percent">50%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="progress-bar" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                            <div class="bootstrap list-element">
+                                <div class="single-skill-header">
+                                    <span class="skill-name">BOOTSTRAP</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="progress-bar" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                            <div class="git list-element">
+                                <div class="single-skill-header">
+                                    <span class="skill-name">GIT</span>
+                                    <span class="skill-percent">50%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="progress-bar" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------------->
+    <!--------PORTFOLIO SECTION--------------->
+    <!---------------------------------->
+    <div class="portfolio-section">
+        <div class="header-text sections-header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title" style="margin-bottom: 70px;">
+                            <h2>Portfolio</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-sm-5 portfolio-item" data-index="1">
+                    <div class="overlay portfolio-item-overlay">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="portfolio-item-img">
+                        <img src="/assets/portfolio-1.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-sm-5 portfolio-item" data-index="2">
+                    <div class="overlay portfolio-item-overlay">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="portfolio-item-img">
+                        <img src="/assets/portfolio-2.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-sm-5 portfolio-item" data-index="3">
+                    <div class="overlay portfolio-item-overlay">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="portfolio-item-img">
+                        <img src="/assets/portfolio-3.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-sm-5 portfolio-item" data-index="4">
+                    <div class="overlay portfolio-item-overlay">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="portfolio-item-img">
+                        <img src="/assets/portfolio-4.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-sm-5 portfolio-item" data-index="5">
+                    <div class="overlay portfolio-item-overlay">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="portfolio-item-img">
+                        <img src="/assets/portfolio-5.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-sm-5 portfolio-item" data-index="6">
+                    <div class="overlay portfolio-item-overlay">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="portfolio-item-img">
+                        <img src="/assets/portfolio-6.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-sm-5 mb-lg-0 portfolio-item" data-index="7">
+                    <div class="overlay portfolio-item-overlay">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="portfolio-item-img">
+                        <img src="/assets/portfolio-7.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-sm-5 mb-lg-0 portfolio-item" data-index="8">
+                    <div class="overlay portfolio-item-overlay">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="portfolio-item-img" >
+                        <img src="/assets/portfolio-8.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 portfolio-item" data-index="9">
+                    <div class="overlay portfolio-item-overlay">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="portfolio-item-img">
+                        <img src="/assets/portfolio-9.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------------->
+    <!--------GET IN TOUCH SECTION--------------->
+    <!---------------------------------->
+    <div class="get-touch-section" id="get-in-touch">
+        <div class="header-text sections-header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title" style="margin-bottom: 70px;">
+                            <h2>Get In Touch</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-6 col-lg-4 mb-4 mt-sm-0 single-info-cover">
+                    <div class="single-info my-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h3>My Location:</h3>
+                        <span>Baku, Azerbaijan</span>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mt-0 mt-lg-5 single-info-cover">
+                    <div class="single-info my-phone" style="background: #222222;">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>Phone Number:</h3>
+                        <span>+9945550744998</span>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mt-4 mt-lg-0 single-info-cover">
+                    <div class="single-info email-address">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h3>Email Address:</h3>
+                        <span>resul.axundov2002@mail.ru</span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 mt-5">
+                    <div class="contact-form">
+                        <div class="row">
+                            <div class="col-12 col-sm-6 mb-3">
+                                <div class="input-cover contact-form-name">
+                                    <input type="text" id="form-name" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 mb-3">
+                                <div class="input-cover contact-form-email">
+                                    <input type="email" id="form-email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <div class="input-cover contact-form-subject">
+                                    <input type="text" id="form-subject" placeholder="Subject">
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <div class="input-cover contact-form-message">
+                                    <textarea name="message" id="form-message" placeholder="Message" style="max-height: 80px;"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-cover contact-form-button">
+                                    <button type="button" id="send-message">SEND MESSAGE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 mt-5">
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=baku,%20azerbaijan&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            <br>
+                            <style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}</style>
+                            <style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
