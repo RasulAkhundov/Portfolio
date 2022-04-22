@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
-    "heroku": "git add . && git commit -m 'heroku' && git push heroku master"
+    "heroku": "git add . && git commit -m 'heroku' && git push heroku main"
   },
   "author": "",
   "license": "ISC",
