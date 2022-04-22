@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     //Loading PAge Animation
     $("#page-open-btn").click(function() {
-        // $("html, body").css('overflow', 'visible');
+        $("html, body").css('overflow', 'visible');
         $(this).addClass('loading-button-animation');
 
         setTimeout(function() {

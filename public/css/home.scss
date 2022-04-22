@@ -27,6 +27,7 @@ html, body {
     margin: 0;
     scroll-behavior: smooth;
     background: #1d1e20;
+    overflow-y: hidden;
 }
 /********* CURSOR POINTER *************/
 .cursor-pointer {
@@ -246,7 +247,7 @@ html, body {
 
 /****** LOADING SECTION ******/
 .loading-cover-wrapper {
-    display: none;
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
@@ -278,7 +279,7 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     z-index: 99;
