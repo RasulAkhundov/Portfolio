@@ -3,9 +3,6 @@ const bodyParser = require("body-parser");
 const cors = require('cors');
 const http = require("http").createServer(app);
 
-//ROUTES
-const contactRouter = require('./routes/contact');
-
 //Set Ejs
 app.set("view engine", 'ejs');
 
@@ -17,9 +14,6 @@ app.use(bodyParser.urlencoded({ limit: "50mb", extended: false }));
 app.use(bodyParser.json({ limit: "50mb" }));
 //cors
 app.use(cors());
-
-//ROUTER INIT
-app.use('/api', contactRouter);
 
 //Home
 app.get('/', (req, res) => {

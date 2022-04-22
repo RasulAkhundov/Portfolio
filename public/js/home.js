@@ -104,26 +104,6 @@ $(document).ready(function() {
         $("#form-email").val("");
         $("#form-subject").val("");
         $("#form-message").val("");
-        // formData.name = $("#form-name").val();
-        // formData.email = $("#form-email").val();
-        // formData.subject = $("#form-subject").val();
-        // formData.message = $("#form-message").val();
-
-        // console.log(formData);
-
-        // let postEmail = await axios
-        // .post('http://192.168.1.105:4000/api/post-contact', formData)
-        // .then(res => {
-        //     $("#form-name").val("");
-        //     $("#form-email").val("");
-        //     $("#form-subject").val("");
-        //     $("#form-message").val("");
-        //     return res.data;
-        // })
-        // .catch(err => {
-        //     console.log("error from api", err);
-        // });
-        // console.log(postEmail);
     })
 
 })
